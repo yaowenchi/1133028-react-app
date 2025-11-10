@@ -1,0 +1,78 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.border-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.border-examples > div {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.simple-border {
+    border: 2px solid #007bff;
+}
+
+.dashed-border {
+    border: 3px dashed #28a745;
+}
+
+.rounded-border {
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+}
+
+.accent-border {
+    border: none;
+    border-left: 5px solid #dc3545;
+    background-color: #fff5f5;
+}
+
+.gradient-border {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #007bff, #28a745) 1;
+    border-radius: 8px;
+}
+/* 統一圓角 */
+.rounded {
+    border-radius: 8px;
+}
+
+/* 分別設定四個角 */
+.custom-rounded {
+    border-radius: 10px 5px 15px 20px; /* 左上 右上 右下 左下 */
+}
+
+/* 橢圓形圓角 */
+.elliptical {
+    border-radius: 50% / 50%; /* 水平半徑 / 垂直半徑 */
+}
+
+/* 完全圓形 */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* 膠囊形狀 */
+.pill {
+    border-radius: 25px; /* 高度的一半 */
+}

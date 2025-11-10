@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.layout-example {
+    max-width: 1200px;
+    margin: 0 auto; /* 整體置中 */
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px; /* 與主要內容的距離 */
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    gap: 30px; /* 使用 gap 避免 margin 問題 */
+    margin-bottom: 30px;
+}
+
+.article {
+    flex: 2;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.article h2 {
+    margin-top: 0; /* 移除預設上外距 */
+    margin-bottom: 20px;
+}
+
+.article p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.article p:last-child {
+    margin-bottom: 0; /* 最後一個段落不需要下外距 */
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #e9ecef;
+    padding: 20px;
+}
+
+.footer {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+

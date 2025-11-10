@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.display-demo {
+    padding: 20px;
+     margin: 20px;
+}
+.display-demo h3 {
+     margin: 25px;
+}
+
+.block-demo {
+    display: block;
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    padding: 10px;
+    margin: 5px 0;
+    width: 200px;
+}
+
+.inline-demo {
+    display: inline;
+    background-color: #f3e5f5;
+    border: 2px solid #9c27b0;
+    padding: 10px;
+    margin: 5px;
+    /* width: 200px; 這個不會生效 */
+}
+
+.inline-block-demo {
+    display: inline-block;
+    background-color: #e8f5e8;
+    border: 2px solid #4caf50;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    vertical-align: top;
+}
+

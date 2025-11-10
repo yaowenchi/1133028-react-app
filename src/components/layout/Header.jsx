@@ -1,11 +1,14 @@
-import { useState } from "react";
-import { HiBars3 } from"react-icons/hi2";
-import { isPathActive, NAV_ITEMS } from "../../utills/navigation"
+import { useState } from "react";                    // 4.6k (gzipped: 1.9k)
+import { HiBars3, HiMoon, HiSun } from "react-icons/hi2"; // 4.4k (gzipped: 1.7k)
+import { Link, useLocation } from "react-router-dom"; // 193k (gzipped: 61.2k)
 import NavLinks from "./NavLink";
-import { Link, useLocation } from "react-router-dom";
+import { NAV_ITEMS, isPathActive } from "../../utills/navigation";
+import UserMenu from "./UserMenu";
+import useTheme from "../../hooks/useTheme";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { theme, toggleTheme } = useTheme("dark");
     const location = useLocation();
     const isNavItemActiv = (path) => isPathActive(path, location.pathname);
     return (
@@ -43,6 +46,20 @@ export default function Header() {
                         items={NAV_ITEMS}
                         isActive={isNavItemActiv}
                         listClassName="menu menu-horizontal px-1"/>
+                </div>
+                <div className="navbar-end flex items-center gap-2">
+                 <button
+                    onClick={toggleTheme}
+                    aria-label="切換主題"
+                    className="btn btn-ghost btn-circle border-2 bg-base-300"
+                >
+                    {theme === "dark" ? (
+                    <HiMoon className="w-6 h-6" />
+                    ) : (
+                    <HiSun className="w-6 h-6" />
+                    )}
+                    </button>
+                    <UserMenu />
                 </div>
             </div>
         </header>

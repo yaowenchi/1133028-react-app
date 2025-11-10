@@ -1,0 +1,58 @@
+/* 1. 重置樣式 */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* 4. 組件樣式 */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* 5. 工具類別 */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
